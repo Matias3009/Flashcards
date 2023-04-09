@@ -1,0 +1,74 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+
+body{
+    background-color: rgb(17, 17, 17);
+}
+
+.botonFlota {
+    position: fixed;
+    bottom: 5.57%;
+    right: 5.57%;
+
+
+}
+
+.linker {
+    text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
+    border: 2px solid #222222;
+    border-radius: 20%;
+    background-color: #222222;
+    color: whitesmoke;
+    line-height: 45px;
+    font-size: 50px;
+    width: 50px;
+    font-weight: 500;
+    height: 50px;
+    display: block;
+    text-align: center;
+    padding: auto;
+    
+}
+
+.flashcar{
+    background-color: rgb(170, 165, 159);
+    width: 76%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    
+    
+}
+.flash{
+    
+    background-color: #cfda93;
+    text-decoration: none;
+    
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    align-content: center;
+    margin: 15px;
+    vertical-align: middle;
+    text-align: center;
+}
+.flash:hover{
+    margin: 10px;
+    background-color: #d0dd88;
+}
+p{
+    margin: 10px;
+    
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+}
