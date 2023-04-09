@@ -14,10 +14,13 @@ tarjetas.default = [];
 function init(){
     console.log("Hello World");
     flashMenu = document.getElementById("contenedor");
+    if(localStorage.getItem("Flash")){
     var gdh = localStorage.getItem("Flash");
+    
     tarjetas = JSON.parse(gdh);
     
     reset();
+    }
 }
 function reset(){
     for (let index = 0; index < tarjetas.default.length; index++) {
