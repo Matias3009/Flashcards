@@ -3,7 +3,7 @@ var flashMenu;
 
 var tarjetas=new Object();
 tarjetas.default = [];
-
+var actual = "default";
 
 
 /*class flashcard{
@@ -23,9 +23,16 @@ function init(){
     reset();
     }
 }
+function removeChilds(){
+    for (let index = 0; index <= flashMenu.childNodes.length; index++) {
+        const element = flashMenu.firstChild;
+        flashMenu.removeChild(element);
+    }
+}
 function reset(){
-    for (let index = 0; index < tarjetas.default.length; index++) {
-        const element = tarjetas.default[index];
+    removeChilds();
+    for (let index = 0; index < tarjetas[actual].length; index++) {
+        const element = tarjetas[actual][index];
         let jku = document.createElement("button");
         let okl = document.createElement("p");
 
@@ -36,13 +43,13 @@ function reset(){
         flashMenu.appendChild(jku);
 
         jku.addEventListener('click', function(){
-            if(tarjetas.default[this.numero].styled == 1){
-                this.firstChild.textContent = tarjetas.default[this.numero].desc;
-                tarjetas.default[this.numero].styled *= -1;
+            if(tarjetas[actual][this.numero].styled == 1){
+                this.firstChild.textContent = tarjetas[actual][this.numero].desc;
+                tarjetas[actual][this.numero].styled *= -1;
             }
             else{
-                this.firstChild.textContent = tarjetas.default[this.numero].name;
-                tarjetas.default[this.numero].styled *= -1;
+                this.firstChild.textContent = tarjetas[actual][this.numero].name;
+                tarjetas[actual][this.numero].styled *= -1;
             }
         });
 
@@ -59,22 +66,22 @@ function llama(){
     let name = prompt("Nombre de la Flashcard:", "No Name!");
     let dess = prompt("Descripción:", "Not have a Description!");
 
-    tarjetas.default.push({"desc": dess, "name": name, "styled":1});
+    tarjetas[actual].push({"desc": dess, "name": name, "styled":1});
 
     
-    var ghlength = tarjetas.default.length-1;
+    var ghlength = tarjetas[actual].length-1;
     let annP = document.createElement("p");
     //var annText = document.createTextNode(name);
     ann.numero = ghlength;
     //ann.href = Elemento(name, annP);
     ann.addEventListener('click', function(){
-        if(tarjetas.default[this.numero].styled == 1){
-            this.firstChild.textContent = tarjetas.default[this.numero].desc;
-            tarjetas.default[this.numero].styled *= -1;
+        if(tarjetas[actual][this.numero].styled == 1){
+            this.firstChild.textContent = tarjetas[actual][this.numero].desc;
+            tarjetas[actual][this.numero].styled *= -1;
         }
         else{
-            this.firstChild.textContent = tarjetas.default[this.numero].name;
-            tarjetas.default[this.numero].styled *= -1;
+            this.firstChild.textContent = tarjetas[actual][this.numero].name;
+            tarjetas[actual][this.numero].styled *= -1;
         }
     });
 
