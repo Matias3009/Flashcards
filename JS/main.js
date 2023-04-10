@@ -5,6 +5,7 @@ var tarjetas=new Object();
 tarjetas.default = [];
 
 
+
 /*class flashcard{
     constructor(clase, name, desc){
         
