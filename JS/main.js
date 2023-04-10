@@ -13,8 +13,14 @@ var actual = "default";
 }*/
 
 function init(){
-    console.log("Hello World");
+    //console.log("Hello World");
     flashMenu = document.getElementById("contenedor");
+
+    let navi = navigator.userAgent;
+    if(navi.match(/Android/i)){
+        document.getElementById("clasesC").style.display = none;
+    }
+
     if(localStorage.getItem("Flash")){
     var gdh = localStorage.getItem("Flash");
     
