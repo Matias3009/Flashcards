@@ -112,3 +112,13 @@ p{
     font-family: 'Roboto Mono', monospace;
     text-align: center;
 }
+
+@media only screen and (min-width:320px) and (max-width:720px){
+    .clase{
+        display: none;
+    }
+    .flashcar{
+        width: 100%;
+        border-radius: 0px;
+    }
+}
