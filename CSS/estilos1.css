@@ -65,6 +65,7 @@ body{
     margin: 15px;
     vertical-align: middle;
     text-align: center;
+    font-size: auto;
 }
 .flash:hover{
     margin: 10px;
