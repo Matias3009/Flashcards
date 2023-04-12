@@ -65,7 +65,7 @@ body{
     margin: 15px;
     vertical-align: middle;
     text-align: center;
-    font-size: auto;
+    font-size: calc((100% / (em))*0.3);
 }
 .flash:hover{
     margin: 10px;
