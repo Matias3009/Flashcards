@@ -65,12 +65,18 @@ function reset(){
 
 function llama(){
     console.log("Add a Bread");
+    
+    let name = prompt("Nombre de la Flashcard:", "No Name!");
+    let dess = prompt("Descripción:", "Not have a Description!");
+
+    if(!name || !dess){
+        console.log("Cancel");
+        return;
+    }
     var ann = document.createElement("button");
     
     
     ann.className = "flash";
-    let name = prompt("Nombre de la Flashcard:", "No Name!");
-    let dess = prompt("Descripción:", "Not have a Description!");
 
     tarjetas[actual].push({"desc": dess, "name": name, "styled":1});
 
