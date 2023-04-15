@@ -3,6 +3,7 @@ var flashMenu, catMenu;
 var editMode = false;
 var tarjetas=new Array();
 var actual = 0;
+var menuDD = -1;
 tarjetas.push(new Array());
 tarjetas[actual].push("Default");
 
@@ -180,6 +181,18 @@ function reset(){
         jku.appendChild(dele);
         jku.click();
     }
+}
+
+function menuSaca(){
+    if(menuDD == -1){
+    catMenu.style.width = "80%";
+    flashMenu.style.width = "20%";
+    }
+    else if(menuDD == 1){
+        catMenu.style.width = "0%";
+        flashMenu.style.width = "100%";
+    }
+    menuDD *= -1;
 }
 
 function llama(){
