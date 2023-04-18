@@ -59,6 +59,9 @@ body{
     background-color: #8e8ee5;
     width: 76%;
     height: 100%;
+
+    overflow-y: scroll;
+
     display: grid;
     grid-template-columns: repeat(auto-fit, 12.5em);
     grid-auto-rows: 7.5em;
@@ -175,7 +178,7 @@ body{
 }
 p{
     margin: 10px;
-    position: fixed;
+    position: absolute;
     font-family: 'Roboto Mono', monospace;
     text-align: center;
 }
